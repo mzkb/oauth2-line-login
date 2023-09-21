@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <title>Line Login Success</title>
+    <meta charset="utf-8">
+    <style>
+        /* Style for the body to make everything centered */
+        body {
+            font-family: Arial, sans-serif; /* A simple font stack */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Reset default margin */
+            display: flex; /* Flexbox for centering */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            background-color: #f4f4f4; /* A light background color */
+        }
+
+        /* Style for the centered box */
+        .center-box {
+            padding: 2rem; /* Padding for space around content */
+            background-color: #fff; /* White background for the box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+            text-align: center; /* Center text and content */
+        }
+
+        /* Style for the key-value pairs */
+        .data-pair {
+            margin-top: 1rem;
+        }
+
+        .data-key {
+            font-weight: bold;
+            display: block; /* Display key as block for newline */
+        }
+
+    </style>
+</head>
+<body>
+<div class="center-box">
+    <h1>Logged in with Line</h1>
+    <div>
+        <img th:src="${line.getPictureUrl()}" alt="User Image" style="border-radius: 50%; width: 100px; height: 100px;">
+    </div>
+    <div class="data-pair">
+        <span class="data-key">User ID</span>
+        <span th:text="${line.userId}"></span>
+    </div>
+    <div class="data-pair">
+        <span class="data-key">Email</span>
+        <span th:text="${line.email}"></span>
+    </div>
+    <div class="data-pair">
+        <span class="data-key">Name</span>
+        <span th:text="${line.name}"></span>
+    </div>
+    <div class="data-pair">
+        <span class="data-key">Display Name</span>
+        <span th:text="${line.displayName}"></span>
+    </div>
+</div>
+</body>
+</html>

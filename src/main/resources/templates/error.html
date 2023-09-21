@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Error - Login With Line</title>
+    <meta charset="utf-8">
+    <style>
+        /* Style for the body to make everything centered */
+        body {
+            font-family: Arial, sans-serif; /* A simple font stack */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Reset default margin */
+            display: flex; /* Flexbox for centering */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+        }
+
+        /* Style for the centered box */
+        .center-box {
+            padding: 2rem; /* Padding for space around content */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+            text-align: center; /* Center text and content */
+        }
+
+        /* Style for the anchor link to make it look like a button */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease; /* A simple transition for hover effect */
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+<div class="center-box">
+    <h1 th:text="${errorTitle}"></h1>
+    <br>
+    <p th:text="${errorMessage}"></p>
+</div>
+</body>
+</html>
